@@ -60,6 +60,4 @@ docker run -i k6new:latest run  --vus 10 --duration 30s - <script_http.js
 Documentation here : https://github.com/loadimpact/k6
 
 ###### To Do:
-Run in Jenkins ( at first as a separate job)
-
 Grafana integration with sbx instance
