@@ -1,0 +1,16 @@
+version: '2.0'
+
+services:
+  fpr-small-pots-perf:
+    container_name: fpr-small-pots-perf
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - no_proxy=fpr-ui-small-pots-encashment,fpr-small-pots-encashment-api
+      - http_proxy=http://dmz-proxy-01.sandbox.local:3128
+  fpr-small-pots-encashment-api:
+    image: registry.sbx.zone/fpr-small-pots-encashment-api:0.0.1
+    container_name: small-pots-be-perf
+    ports:
+      - '4001:4001' 
